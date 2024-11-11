@@ -8,3 +8,11 @@ issues are  welcome, we also welcome unit tests(new or updated).
 ### More history, the story or user story
 we had been used to write a `formgenerator` (new era :`formbuilder`) every year, so decided to write another one which is the last.
 we are adding logic to it to be more usable, graphic is also important.
+
+
+
+
+current state of unit tests
+
+![image](https://github.com/user-attachments/assets/b36e5f2a-4404-4444-8678-df8f1760527c)
+
