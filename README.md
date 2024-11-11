@@ -1,5 +1,5 @@
 # miniScript (we call it YSL in yalda, it's birthplace)
-Trying to write a `DSL` which converts the provided code to Old Honoured `JQuery`. we are using it inside our formgenerator.
+Trying to write a `DSL` which converts the provided code to old Honoured `JQuery`. we are using it inside our formgenerator.
 after the idea was baked enough, using current ai technology we started it from scratch step by step.
 currently the documentation can be found nowhere. 
 issues are  welcome, we also welcome unit tests(new or updated).
