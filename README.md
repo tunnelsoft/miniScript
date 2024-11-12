@@ -1,13 +1,16 @@
 # miniScript 
-================
 
 miniScript is a lightweight scripting language designed for simplicity and ease of use. 
 currently its main usecase is converting provided code to old honoured `JQuery`.
 
 It was a hobby project aimed at creating a `DSL` that is used in writing fast and reliable JQuery code. we are using it inside our `formbuilder`. 
+
 after the idea was baked enough, using current ai technology we started it from scratch step by step and used Antlr 4.13.2 as parser engine.
+
 currently the documentation can be found nowhere.
+
 issues are  welcome, we also like unit tests(new or updated) to cover more use cases.
+
 we call it YSL(Yalda Scripting Language) in yalda, her birthplace.
 
 ## Features
@@ -53,5 +56,6 @@ we are adding logic to both of them to be more usable and understandable, graphi
 
 
 current state of unit tests
+
 ![image](https://github.com/user-attachments/assets/b36e5f2a-4404-4444-8678-df8f1760527c)
 
