@@ -1,6 +1,4 @@
 # miniScript 
-
-# miniScript
 ================
 
 miniScript is a lightweight scripting language designed for simplicity and ease of use. 
