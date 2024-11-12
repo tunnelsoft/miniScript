@@ -57,5 +57,7 @@ we are adding logic to both of them to be more usable and understandable, graphi
 
 current state of unit tests
 
-![image](https://github.com/user-attachments/assets/b36e5f2a-4404-4444-8678-df8f1760527c)
+All Passed: :)
+
+![image](https://github.com/user-attachments/assets/73ec3ee8-ec46-410f-92c3-6852fc67b659)
 
