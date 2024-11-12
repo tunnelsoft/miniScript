@@ -1,0 +1,33 @@
+//Created @11/9/2024 5:25:32 PM
+//Compiler Version is 0.1.0.0
+var t1 = 0;
+$('#input1').val(100);
+$('#inp3').val('Defaultval');
+if (t1 == 0) {
+$('#inp3').val('it is 0');
+}
+
+if ($('#input1').val() == '100') {
+$('#inp3').val('input1 is 100');
+}
+
+var t1 = 0;
+var ContractPercentage = 2000 + t1;
+$('#ContractPercentage').val('200');
+GetValidTitles(ddl1, ddl2);
+$('#ItemQuantity').val('0');
+$('#input1').val(input2 + (input3 * input2));
+if ($('#input1').val() > 10) {
+$('#input1').val(input1 + 5);
+$('#input1').val(input1 - 5);
+}
+else {
+$('#input1').val(input1 + 5);
+$('#input1').val(input1 - 5);
+}
+
+while ($('#input1').val() < 10) {
+$('#input1').val(input1 - 1);
+}
+
+myFunction(t1, input1, inp3);

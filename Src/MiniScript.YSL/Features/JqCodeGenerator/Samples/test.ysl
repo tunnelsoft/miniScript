@@ -1,0 +1,25 @@
+var t1 = 0; 
+input1 = 100; 
+inp3 = 'Defaultval'; 
+if (t1 == 0) { 
+	inp3 = 'it is 0'; 
+} 
+if (input1 == '100') { 
+	inp3 = 'input1 is 100'; 
+} 
+var t1 = 0;
+var ContractPercentage = 2000 + t1' 
+ContractPercentage = '200';
+;GetValidTitles(ddl1, ddl2);
+ItemQuantity = '0';
+
+input1 = input2 + (input3 * input2);
+if (input1 > 10) {
+	input1 = input1 + 5;
+} else {
+	input1 = input1 - 5;
+}
+loop (input1 < 10) {
+	input1 = input1 - 1;
+}
+myFunction(t1, input1, inp3);

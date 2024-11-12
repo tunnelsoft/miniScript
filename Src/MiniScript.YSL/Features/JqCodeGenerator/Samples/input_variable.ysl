@@ -1,0 +1,16 @@
+
+
+
+//this is first comment
+var t1 = 0; 
+t2 = 110; 
+t2 = 110 + inp4;
+//var t1 = 0; 
+var numbers = [];
+var numbers2 = [1, 2, 3];
+var numbers3 = [1, 2, 3, 4, 5];
+var numbers4 = [][];
+numbers[0] = 10;
+var isEnabled = true;
+var isActive = !isEnabled;
+var isInactive = not isActive;
