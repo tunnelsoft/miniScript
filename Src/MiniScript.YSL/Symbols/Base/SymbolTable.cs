@@ -1,4 +1,4 @@
-﻿namespace TunnelSoft.YSL.Features.CodeGenerator;
+﻿namespace TunnelSoft.MiniScript.YSL.Symbols.Base;
 using System.Collections.Generic;
 
 public class SymbolTable {

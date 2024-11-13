@@ -1,4 +1,5 @@
-﻿using TunnelSoft.Utilities;
+﻿using TunnelSoft.MiniScript.YSL.Symbols;
+using TunnelSoft.Utilities;
 
 namespace TunnelSoft.YSL.Features.CodeGenerator;
 

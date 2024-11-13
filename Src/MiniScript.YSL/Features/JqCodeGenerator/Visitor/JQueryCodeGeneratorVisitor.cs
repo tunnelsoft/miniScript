@@ -4,6 +4,8 @@ using static TunnelSoft.YSL.Features.CodeGenerator.Constants;
 using Antlr4.Runtime;
 using Serilog;
 using TunnelSoft.Utilities;
+using TunnelSoft.MiniScript.YSL.Symbols;
+using TunnelSoft.MiniScript.YSL.Symbols.Base;
 
 
 namespace TunnelSoft.YSL.Features.CodeGenerator;

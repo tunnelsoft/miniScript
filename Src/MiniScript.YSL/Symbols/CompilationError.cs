@@ -1,4 +1,4 @@
-﻿namespace TunnelSoft.YSL.Features.CodeGenerator;
+﻿namespace TunnelSoft.MiniScript.YSL.Symbols;
 using System.Collections.Generic;
 
 // CompilationError class to represent errors
@@ -19,3 +19,4 @@ public class CompilationError {
         OffendingSymbol = offendingSymbol ?? "";
     }
 }
+

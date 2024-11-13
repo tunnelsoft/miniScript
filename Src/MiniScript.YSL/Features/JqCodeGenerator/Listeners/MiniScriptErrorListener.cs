@@ -1,4 +1,5 @@
 ﻿using Antlr4.Runtime;
+using TunnelSoft.MiniScript.YSL.Symbols;
 
 namespace TunnelSoft.YSL.Features.CodeGenerator;
 public class MiniScriptErrorListener : IAntlrErrorListener<IToken> {

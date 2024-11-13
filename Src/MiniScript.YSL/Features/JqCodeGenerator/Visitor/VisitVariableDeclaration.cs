@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using Antlr4.Runtime;
+using TunnelSoft.MiniScript.YSL.Symbols;
+using TunnelSoft.MiniScript.YSL.Symbols.Base;
 
 //using TunnelSoft.YSL.Features.CodeGenerator.SymbolTable; 
 

@@ -1,4 +1,4 @@
-﻿namespace TunnelSoft.YSL.Features.CodeGenerator;
+﻿namespace TunnelSoft.MiniScript.YSL.Symbols.Base;
 public enum SymbolType {
     Variable,
     Function,
