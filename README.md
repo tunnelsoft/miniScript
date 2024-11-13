@@ -34,7 +34,7 @@ To be written
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to the development of miniScript, please fork this repository and submit a pull request with your changes.
-writing or updating unit tests are needed to merge code.
+**writing or updating unit tests are needed to merge code.**
 
 ## License
 
