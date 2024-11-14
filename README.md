@@ -1,5 +1,7 @@
 # miniScript 
 
+[![.NET](https://github.com/tunnelsoft/miniScript/actions/workflows/dotnet.yml/badge.svg?branch=main&event=push)](https://github.com/tunnelsoft/miniScript/actions/workflows/dotnet.yml)
+
 miniScript is a lightweight scripting language designed for simplicity and ease of use. 
 currently its main usecase is converting provided code to old honoured `JQuery`.
 
