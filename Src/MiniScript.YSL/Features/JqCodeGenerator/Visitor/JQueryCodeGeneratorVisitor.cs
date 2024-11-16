@@ -6,6 +6,8 @@ using Serilog;
 using TunnelSoft.Utilities;
 using TunnelSoft.MiniScript.YSL.Symbols;
 using TunnelSoft.MiniScript.YSL.Symbols.Base;
+using TunnelSoft.MiniScript.YSL.Functions;
+using TunnelSoft.MiniScript.YSL.SL;
 
 
 namespace TunnelSoft.YSL.Features.CodeGenerator;
@@ -26,7 +28,7 @@ public partial class JQueryCodeGeneratorVisitor : MiniScriptBaseVisitor<string> 
 
 
 
-
+    private readonly FunctionManager functionManager;
 
     //to get errors from right place.
     private MiniScriptErrorListener errorListener = new MiniScriptErrorListener();
@@ -42,6 +44,18 @@ public partial class JQueryCodeGeneratorVisitor : MiniScriptBaseVisitor<string> 
         var compileResult4 = Visit(_tree);
         return compileResult4;
     }
+
+    private void InitializeStandardLibrary() {
+        // Register standard library functions
+        foreach (var funcName in StandardLibrary.GetFunctionNames()) {
+            var funcDecl = new FunctionDeclaration {
+                Name = funcName,
+                IsBuiltin = true
+            };
+            functionManager.RegisterFunction(funcDecl);
+        }
+    }
+
 
 
     // Method to retrieve the generated JavaScript code

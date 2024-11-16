@@ -18,6 +18,7 @@ public class FunctionDeclaration {
     public HashSet<string> CapturedVariables { get; }
     public string SourceFile { get; set; }
     public int DeclarationLine { get; set; }
+    public bool IsBuiltin { get; set; } = false;
 
     public FunctionDeclaration() {
         Parameters = new List<FunctionParameter>();
