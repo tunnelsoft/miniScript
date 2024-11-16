@@ -35,6 +35,14 @@ public partial class JQueryCodeGeneratorVisitor : MiniScriptBaseVisitor<string> 
     private MiniScriptParser? _parser = null;
     MiniScriptParser.ProgramContext? _tree = null;
 
+
+    public JQueryCodeGeneratorVisitor() {
+        functionManager = new FunctionManager();
+        // Initialize standard library
+        InitializeStandardLibrary();
+    }
+
+
     public string CompileParserCode(MiniScriptParser miniScriptParser) {
         _parser = miniScriptParser;
         _parser.AddErrorListener(errorListener);
