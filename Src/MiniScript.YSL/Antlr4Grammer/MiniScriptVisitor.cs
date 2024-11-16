@@ -38,11 +38,35 @@ public interface IMiniScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitProgram([NotNull] MiniScriptParser.ProgramContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="MiniScriptParser.functionDeclaration"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFunctionDeclaration([NotNull] MiniScriptParser.FunctionDeclarationContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="MiniScriptParser.parameterList"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitParameterList([NotNull] MiniScriptParser.ParameterListContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="MiniScriptParser.parameter"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitParameter([NotNull] MiniScriptParser.ParameterContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="MiniScriptParser.statement"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitStatement([NotNull] MiniScriptParser.StatementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="MiniScriptParser.returnStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitReturnStatement([NotNull] MiniScriptParser.ReturnStatementContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="MiniScriptParser.variableDeclaration"/>.
 	/// </summary>

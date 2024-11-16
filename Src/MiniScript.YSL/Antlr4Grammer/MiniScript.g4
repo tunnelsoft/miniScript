@@ -4,7 +4,11 @@ grammar MiniScript;
 // Lexer Rules
 // =====================
 
-// Keywords
+// Additional Keywords for Functions
+FUNCTION    : 'function';
+RETURN      : 'return';
+
+// Existing Keywords
 IF          : 'if';
 ELSE        : 'else';
 LOOP        : 'loop';
@@ -55,9 +59,25 @@ MULTILINE_COMMENT
 // =====================
 
 program
-    : statement* EOF
+    : (functionDeclaration | statement)* EOF
     ;
 
+// New rule for function declaration
+functionDeclaration
+    : FUNCTION IDENTIFIER LPAREN parameterList? RPAREN block
+    ;
+
+// New rule for parameter list
+parameterList
+    : parameter (COMMA parameter)*
+    ;
+
+// New rule for individual parameter
+parameter
+    : IDENTIFIER (ASSIGN expression)?    // Optional default value
+    ;
+
+// Modified statement rule to include return
 statement
     : variableDeclaration
     | assignment
@@ -68,8 +88,14 @@ statement
     | continueStatement
     | expressionStatement
     | functionCallStatement
+    | returnStatement           // Added return statement
     | comment
     | multilineComment
+    ;
+
+// New rule for return statement
+returnStatement
+    : RETURN expression? SEMICOLON
     ;
 
 variableDeclaration
