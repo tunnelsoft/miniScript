@@ -104,17 +104,7 @@ public static class StandardLibrary {
         }
     }
 
-    public static class Debug {
-        public static void Assert(bool condition, string message = null) {
-            if (!condition) {
-                throw new AssertionException(message ?? "Assertion failed");
-            }
-        }
 
-        public static void Log(object value, string level = "info") {
-            // Implement logging logic
-        }
-    }
 }
 
 public class AssertionException : Exception {

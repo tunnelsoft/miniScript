@@ -14,40 +14,40 @@ public partial class JQueryCodeGeneratorVisitor {
 
         var functionDecl = new FunctionDeclaration {
             Name = functionName,
-            Parameters = parameters,
+            //Parameters = parameters,
             Body = context.block(),
             DeclarationLine = context.Start.Line,
             SourceFile =  ""  // currentSourceFile // Add this field to track source file
         };
 
         // Create new CFG for function
-        var functionCfg = new ControlFlowGraph();
-        cfgStack.Push(functionCfg);
+        //var functionCfg = new ControlFlowGraph();
+        //cfgStack.Push(functionCfg);
 
-        try {
-            // Process function body
-            var bodyCode = Visit(context.block());
+        //try {
+        //    // Process function body
+        //    var bodyCode = Visit(context.block());
 
-            // Build CFG from function body
-            functionCfg.BuildFromAST(context.block());
+        //    // Build CFG from function body
+        //    functionCfg.BuildFromAST(context.block());
 
-            // Optimize the CFG
-            functionCfg.Optimize();
+        //    // Optimize the CFG
+        //    functionCfg.Optimize();
 
-            // Register function
-            functionManager.RegisterFunction(functionDecl);
+        //    // Register function
+        //    functionManager.RegisterFunction(functionDecl);
 
-            // Generate function code
-            return GenerateFunctionCode(functionName, parameters, bodyCode);
-        } finally {
-            cfgStack.Pop();
-        }
+        //    // Generate function code
+        //    return GenerateFunctionCode(functionName, parameters, bodyCode);
+        //} finally {
+        //    cfgStack.Pop();
+        //}
     }
 
     private string GenerateFunctionCode(string name, List<FunctionParameter> parameters, string body) {
         var paramList = string.Join(", ", parameters.Select(p => {
             if (p.IsOptional)
-                return $"{p.Name} = {Visit(p.DefaultValue)}";
+                //return $"{p.Name} = {Visit(p.DefaultValue)}";
             return p.Name;
         }));
 
