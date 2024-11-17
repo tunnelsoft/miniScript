@@ -2,6 +2,9 @@
 using TunnelSoft.YSL.Features.CodeGenerator;
 using TunnelSoft.YSL.Features.CodeGenerator.Interfaces;
 
+
+
+[TestClass]
 public class OptimizationTests {
     private JQueryCodeGenerator generator;
 

@@ -1,6 +1,9 @@
 ﻿namespace TunnelSoft.MiniScript.YSL.Test;
 using TunnelSoft.YSL.Features.CodeGenerator;
 
+
+
+[TestClass]
 public class StandardLibraryTests {
     private JQueryCodeGenerator generator;
 

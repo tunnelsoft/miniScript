@@ -20,6 +20,8 @@ public partial class JQueryCodeGeneratorVisitor {
             SourceFile =  ""  // currentSourceFile // Add this field to track source file
         };
 
+        return "";
+
         // Create new CFG for function
         //var functionCfg = new ControlFlowGraph();
         //cfgStack.Push(functionCfg);
@@ -48,6 +50,7 @@ public partial class JQueryCodeGeneratorVisitor {
         var paramList = string.Join(", ", parameters.Select(p => {
             if (p.IsOptional)
                 //return $"{p.Name} = {Visit(p.DefaultValue)}";
+                return "";
             return p.Name;
         }));
 

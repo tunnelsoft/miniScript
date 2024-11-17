@@ -9,6 +9,7 @@ namespace TunnelSoft.MiniScript.YSL.Test;
 
 
 
+[TestClass]
 public class SymbolTableTests {
     private SymbolTable symbolTable;
 

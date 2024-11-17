@@ -10,7 +10,7 @@ namespace TunnelSoft.MiniScript.YSL.Functions;
 
 public class FunctionDeclaration {
     public string Name { get; set; }
-    public List<FunctionParameter> Parameters { get; }
+    public List<FunctionParameter> Parameters { get; internal set; }
     public DataType ReturnType { get; set; }
     public MiniScriptParser.BlockContext Body { get; set; }
     public SymbolTable ClosureScope { get; }
