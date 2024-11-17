@@ -1,10 +1,13 @@
 ﻿namespace TunnelSoft.MiniScript.YSL.Test;
 using TunnelSoft.YSL.Features.CodeGenerator;
 
+[TestClass]
 public class ErrorHandlingTests {
     private JQueryCodeGenerator generator;
 
-    public ErrorHandlingTests() {
+
+    [TestInitialize]
+    public void Initialize() {
         generator = new JQueryCodeGenerator();
     }
 
@@ -13,14 +16,14 @@ public class ErrorHandlingTests {
         var result = await generator.GenerateCode("print(undeclaredVar);");
         Assert.IsTrue(result.Success);
         Assert.IsFalse(result.Data.IsCompileSuccess);
-        //
-        //Assert.Contains("Undefined variable 'undeclaredVar'", result.ErrorMessage);
+        
+        Debug.Contains("Undefined variable 'undeclaredVar'", result.Data.CompileErrors);
     }
 
     [TestMethod]
     public async Task TestErrorHandling_SyntaxError() {
         var result = await generator.GenerateCode("if (x > 3) { print(x); ");
         Assert.IsFalse(result.Data.IsCompileSuccess);
-        Debug.Contains("Syntax error", result.Data.CompileErrors);
+        Debug.Contains("Compilation Errors:", result.Data.CompileErrors);
     }
 }

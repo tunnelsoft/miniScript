@@ -4,10 +4,14 @@
 using Antlr4.Runtime;
 using TunnelSoft.YSL.Features.CodeGenerator;
 
+
+[TestClass]
 public class VisitorTests {
     private JQueryCodeGeneratorVisitor visitor;
 
-    public VisitorTests() {
+
+    [TestInitialize]
+    public void Initialize() {
         visitor = new JQueryCodeGeneratorVisitor();
     }
 
@@ -22,45 +26,45 @@ public class VisitorTests {
     [TestMethod]
     public void TestVisitor_VariableDeclaration() {
         var result = GenerateCode("var x = 5;");
-        Assert.Equal("var x = 5;", result.Trim());
+        Assert.AreEqual("var x = 5;", result.Trim());
     }
 
     [TestMethod]
     public void TestVisitor_IfStatement() {
         var result = GenerateCode("if (x > 3) { print(x); }");
-        Assert.Contains("if (x > 3) {", result);
-        Assert.Contains("console.log(x);", result);
-        Assert.Contains("}", result);
+        Debug.Contains("if (x > 3) {", result);
+        Debug.Contains("console.log(x);", result);
+        Debug.Contains("}", result);
     }
 
     [TestMethod]
     public void TestVisitor_LoopStatement() {
         var result = GenerateCode("loop (i < 10) { i = i + 1; }");
-        Assert.Contains("while (i < 10) {", result);
-        Assert.Contains("i = i + 1;", result);
-        Assert.Contains("}", result);
+        Debug.Contains("while (i < 10) {", result);
+        Debug.Contains("i = i + 1;", result);
+        Debug.Contains("}", result);
     }
 
     [TestMethod]
     public void TestVisitor_ForStatement() {
         var result = GenerateCode("for (var i = 0; i < 10; i = i + 1) { print(i); }");
-        Assert.Contains("for (var i = 0; i < 10; i = i + 1) {", result);
-        Assert.Contains("console.log(i);", result);
-        Assert.Contains("}", result);
+        Debug.Contains("for (var i = 0; i < 10; i = i + 1) {", result);
+        Debug.Contains("console.log(i);", result);
+        Debug.Contains("}", result);
     }
 
     [TestMethod]
     public void TestVisitor_FunctionDeclaration() {
         var result = GenerateCode("function add(a, b) { return a + b; }");
-        Assert.Contains("function add(a, b) {", result);
-        Assert.Contains("return a + b;", result);
-        Assert.Contains("}", result);
+        Debug.Contains("function add(a, b) {", result);
+        Debug.Contains("return a + b;", result);
+        Debug.Contains("}", result);
     }
 
     [TestMethod]
     public void TestVisitor_ArrayOperations() {
         var result = GenerateCode("var arr = [1, 2, 3]; arr[1] = 4;");
-        Assert.Contains("var arr = [1, 2, 3];", result);
-        Assert.Contains("arr[1] = 4;", result);
+        Debug.Contains("var arr = [1, 2, 3];", result);
+        Debug.Contains("arr[1] = 4;", result);
     }
 }

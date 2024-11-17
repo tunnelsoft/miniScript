@@ -29,6 +29,14 @@ public static class Debug {
     }
 
 
+    public static void DoesNotContain(string? expected, string? actual) {
+        if (expected == actual
+            || (actual != null && expected != null && actual.Contains(expected))) {
+            throw new AssertFailedException("Contains.Contains");
+        }
+    }
+
+
 
     public static void Log(object value, string level = "info") {
         // Implement logging logic

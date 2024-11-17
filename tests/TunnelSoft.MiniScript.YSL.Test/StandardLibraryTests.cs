@@ -18,14 +18,14 @@ public class StandardLibraryTests {
     [TestMethod]
     public async Task TestStandardLibrary_Print() {
         var result = await generator.GenerateCode("print('Hello, World!');");
-        Assert.IsTrue(result.IsSuccess);
-        Assert.Contains("console.log('Hello, World!');", result.CompiledCode);
+        Assert.IsTrue(result.Data.IsCompileSuccess);
+        Debug.Contains("console.log('Hello, World!');", result.Data.CompiledCode);
     }
 
     [TestMethod]
     public async Task TestStandardLibrary_MathOperations() {
         var result = await generator.GenerateCode("var x = Math.max(5, 10);");
-        Assert.IsTrue(result.IsSuccess);
-        Assert.Contains("var x = Math.max(5, 10);", result.CompiledCode);
+        Assert.IsTrue(result.Data.IsCompileSuccess);
+        Debug.Contains("var x = Math.max(5, 10);", result.Data.CompiledCode);
     }
 }

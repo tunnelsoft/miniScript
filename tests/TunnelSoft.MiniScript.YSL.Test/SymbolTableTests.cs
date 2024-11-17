@@ -16,6 +16,7 @@ public class SymbolTableTests {
         symbolTable = new SymbolTable();
     }
 
+
     [TestMethod]
     public void TestSymbolTable_DeclareAndRetrieve() {
         symbolTable.Declare("x", SymbolType.Variable);
